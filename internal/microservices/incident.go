@@ -12,7 +12,6 @@ func (m *MicroServiceStr) ReadIncidentData() (outputData []model.IncidentData, r
 
 	outputData = make([]model.IncidentData, 0)
 
-	//TODO:catch the panic!!!
 	response, err := http.Get("http://localhost:8383/accendent")
 	if err != nil {
 		fmt.Print("can't GET incident-data: ", err)

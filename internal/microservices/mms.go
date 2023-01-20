@@ -11,7 +11,6 @@ import (
 func (m *MicroServiceStr) ReadMMS() (outputData []model.MMSData, respStatusCode int) {
 	outputData = make([]model.MMSData, 0)
 
-	//TODO:catch the panic!!!
 	response, err := http.Get("http://localhost:8383/mms")
 	if err != nil {
 		fmt.Print("can't GET MMS-data: ", err)

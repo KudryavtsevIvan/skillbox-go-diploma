@@ -12,7 +12,6 @@ func (m *MicroServiceStr) ReadSupportData() (outputData []model.SupportData, res
 
 	outputData = make([]model.SupportData, 0)
 
-	//TODO:catch the panic!!!
 	response, err := http.Get("http://localhost:8383/support")
 	if err != nil {
 		fmt.Print("can't GET support-data: ", err)

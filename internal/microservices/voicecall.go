@@ -8,7 +8,6 @@ import (
 	"os"
 )
 
-//...
 func (m *MicroServiceStr) ReadVoiceCall() (outputData []model.VoiceCallData) {
 	a := model.VoiceCallData{}
 

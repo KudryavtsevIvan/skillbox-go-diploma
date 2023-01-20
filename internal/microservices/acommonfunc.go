@@ -22,7 +22,7 @@ const (
 )
 
 type MicroServiceStr struct {
-	//m *Result
+	
 }
 
 type MicroServicer interface {
