@@ -3,7 +3,7 @@ package app
 import (
 	"fmt"
 	"graduatework/internal/handler"
-	dcollect "graduatework/internal/infrastructure"
+	dcollect "graduatework/internal/microservices"
 	"graduatework/internal/service"
 	"log"
 	"net/http"
