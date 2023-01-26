@@ -11,7 +11,7 @@
 
 ## Сторонние Пакеты
     github.com/gorilla/mux - мультиплексор HTTP-запросов
-    https://github.com/go-yaml/yaml - поддержка YAML для языка Go
+    github.com/go-yaml/yaml - поддержка YAML для языка Go
     
 
 
