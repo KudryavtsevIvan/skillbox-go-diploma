@@ -2,6 +2,7 @@ package dcollect
 
 import (
 	"fmt"
+	"graduatework/internal/config"
 	"graduatework/internal/model"
 	"io/ioutil"
 	"math"
@@ -10,7 +11,7 @@ import (
 
 func (m *MicroServiceStr) ReadBilling() (outputData model.BillingData) {
 
-	body, err := ioutil.ReadFile("./billing.data")
+	body, err := ioutil.ReadFile(config.GlobalConfig.BillingFile)
 	if err != nil {
 		fmt.Print("error reading the billing data", err)
 	}

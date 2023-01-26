@@ -3,6 +3,7 @@ package dcollect
 import (
 	"encoding/csv"
 	"fmt"
+	"graduatework/internal/config"
 	"graduatework/internal/model"
 	"io"
 	"os"
@@ -11,7 +12,7 @@ import (
 func (m *MicroServiceStr) ReadVoiceCall() (outputData []model.VoiceCallData) {
 	a := model.VoiceCallData{}
 
-	content, err := os.Open("./voice.data")
+	content, err := os.Open(config.GlobalConfig.VoiceCallFile)
 	if err != nil {
 		fmt.Print(err)
 	}

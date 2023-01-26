@@ -3,6 +3,7 @@ package dcollect
 import (
 	"encoding/csv"
 	"fmt"
+	"graduatework/internal/config"
 	"graduatework/internal/model"
 	"io"
 	"os"
@@ -11,7 +12,7 @@ import (
 func (m *MicroServiceStr) ReadEmail() (outputData []model.EmailData) {
 	a := model.EmailData{}
 
-	content, err := os.Open("./email.data")
+	content, err := os.Open(config.GlobalConfig.EmailFile)
 	if err != nil {
 		fmt.Print(err)
 	}

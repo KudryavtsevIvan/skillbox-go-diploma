@@ -3,6 +3,7 @@ package dcollect
 import (
 	"encoding/json"
 	"fmt"
+	"graduatework/internal/config"
 	"graduatework/internal/model"
 	"io"
 	"net/http"
@@ -12,7 +13,7 @@ func (m *MicroServiceStr) ReadSupportData() (outputData []model.SupportData, res
 
 	outputData = make([]model.SupportData, 0)
 
-	response, err := http.Get("http://localhost:8383/support")
+	response, err := http.Get(config.GlobalConfig.SupportAddr)
 	if err != nil {
 		fmt.Print("can't GET support-data: ", err)
 	}

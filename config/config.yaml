@@ -1,0 +1,8 @@
+addr: localhost:8282
+sms_file: sms.data
+mms_addr: http://localhost:8383/mms
+voice_call_file: voice.data
+email_file: email.data
+billing_file: billing.data
+support_addr: http://localhost:8383/support
+incident_addr: http://localhost:8383/accendent

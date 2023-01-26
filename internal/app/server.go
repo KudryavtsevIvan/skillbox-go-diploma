@@ -2,6 +2,7 @@ package app
 
 import (
 	"fmt"
+	"graduatework/internal/config"
 	"graduatework/internal/handler"
 	dcollect "graduatework/internal/microservices"
 	"graduatework/internal/service"
@@ -31,10 +32,10 @@ func RunServer() {
 	service := service.NewServiceManage(microServ)
 	handle := handler.NewHandler(service)
 	handle.RegisterR(s.Router)
-	fmt.Print("server starts at port 8282 \n")
-	err := http.ListenAndServe("localhost:8282", s)
+	fmt.Print("Server started\n")
+	err := http.ListenAndServe(config.GlobalConfig.Addr, s)
 	if err != nil {
-		log.Fatal("server didn't start: ", err)
+		log.Fatal("Server didn't start: ", err)
 	}
 
 }

@@ -3,6 +3,7 @@ package dcollect
 import (
 	"encoding/csv"
 	"fmt"
+	"graduatework/internal/config"
 	"graduatework/internal/model"
 	"io"
 	"os"
@@ -11,7 +12,7 @@ import (
 func (m *MicroServiceStr) ReadSMS() (outputData []model.SMSData) {
 	a := model.SMSData{}
 
-	content, err := os.Open("./sms.data")
+	content, err := os.Open(config.GlobalConfig.SMSFile)
 	if err != nil {
 		fmt.Print(err)
 	}

@@ -3,6 +3,7 @@ package dcollect
 import (
 	"encoding/json"
 	"fmt"
+	"graduatework/internal/config"
 	"graduatework/internal/model"
 	"io"
 	"net/http"
@@ -11,7 +12,7 @@ import (
 func (m *MicroServiceStr) ReadMMS() (outputData []model.MMSData, respStatusCode int) {
 	outputData = make([]model.MMSData, 0)
 
-	response, err := http.Get("http://localhost:8383/mms")
+	response, err := http.Get(config.GlobalConfig.MMSAddr)
 	if err != nil {
 		fmt.Print("can't GET MMS-data: ", err)
 	}
